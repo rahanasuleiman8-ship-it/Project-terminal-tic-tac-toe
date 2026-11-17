@@ -16,6 +16,20 @@
     Test your function by calling it with an example tic-tac-toe board.
 */
 export function printBoard(board) {
+	const formatCell = (cell) => (cell === "_" ? " " : cell);
+
+	console.log(
+		` ${formatCell(board[0][0])} | ${formatCell(board[0][1])} | ${formatCell(board[0][2])} `,
+	);
+	console.log("=================");
+	console.log(
+		` ${formatCell(board[1][0])} | ${formatCell(board[1][1])} | ${formatCell(board[1][2])} `,
+	);
+	console.log("=================");
+	console.log(
+		` ${formatCell(board[2][0])} | ${formatCell(board[2][1])} | ${formatCell(board[2][2])} `,
+	);
+	console.log("=================");
 }
 
 /*
@@ -23,5 +37,4 @@ export function printBoard(board) {
         - return true if there are no moves left to make (there are no more '_' values)
         - return false if there are still moves that can be made
 */
-export function checkIfNoMovesLeft(board) {
-}
+export function checkIfNoMovesLeft(board) {}
